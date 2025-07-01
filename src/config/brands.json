@@ -1,0 +1,33 @@
+/*
+ * brands.json
+ * Centralized configuration for all supported brands in the security company MVP.
+ * Each brand object contains brand-specific overrides (colors, CTAs, etc.) while keeping shared keys consistent.
+ * @todo: Add more brands and support for additional override fields as needed.
+ */
+{
+  "SafeHaven": {
+    "id": "safehaven",
+    "name": "SafeHaven Security",
+    "primaryColor": "#2563eb",
+    "ctaText": "Get Protected Today!",
+    "phone": "1-800-SAFE-123",
+    "region": "US",
+    "default": true
+  },
+  "BestSecurity": {
+    "id": "bestsecurity",
+    "name": "BestSecurity FL",
+    "primaryColor": "#059669",
+    "ctaText": "Florida's #1 Security!",
+    "phone": "1-800-FL-SECURE",
+    "region": "FL"
+  },
+  "TopSecurity": {
+    "id": "topsecurity",
+    "name": "TopSecurity GA",
+    "primaryColor": "#f59e42",
+    "ctaText": "Georgia's Trusted Choice!",
+    "phone": "1-800-GA-TOPSEC",
+    "region": "GA"
+  }
+} 
