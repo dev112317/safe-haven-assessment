@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * BrandContext.jsx
  * Provides React Context for brand configuration and switching.

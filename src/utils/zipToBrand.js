@@ -14,10 +14,16 @@ export function zipToBrand(zip) {
   const zipMap = {
     // North Carolina (SafeHaven)
     '28': 'safehaven',
+    // South Carolina (SafeHaven)
+    '29': 'safehaven',
+    // Tennessee (SafeHaven)
+    '37': 'safehaven', '38': 'safehaven', '39': 'safehaven',
     // Florida (BestSecurity)
     '32': 'bestsecurity', '33': 'bestsecurity', '34': 'bestsecurity',
     // Georgia (TopSecurity)
     '30': 'topsecurity', '31': 'topsecurity',
+    // Alabama (RedHawk Alarms)
+    '35': 'redhawk', '36': 'redhawk',
   };
   if (!/^[0-9]{5}$/.test(zip)) return null; // Invalid ZIP
   const prefix = zip.slice(0, 2);

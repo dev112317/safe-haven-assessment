@@ -8,7 +8,7 @@
 import React, { useEffect, useState } from 'react';
 
 // @todo: Replace with env var in production
-const OPENWEATHER_API_KEY = process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY || '';
+const OPENWEATHER_API_KEY = process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY || '6764f3fa365aed5cd6ce093402eadabe';
 
 /**
  * WeatherWidget component

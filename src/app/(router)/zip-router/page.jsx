@@ -5,9 +5,10 @@
  * @todo: Add geolocation fallback for user convenience.
  */
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { zipToBrand } from '../../../utils/zipToBrand';
+import { captureUTM } from '../../../utils/tracking';
 
 /**
  * ZIP Router Page Component
@@ -16,6 +17,14 @@ export default function ZipRouterPage() {
   const [zip, setZip] = useState('');
   const [error, setError] = useState('');
   const router = useRouter();
+
+  // Capture UTM parameters on page load
+  useEffect(() => {
+    // Add a small delay to ensure URL is fully loaded
+    setTimeout(() => {
+      captureUTM();
+    }, 100);
+  }, []);
 
   /**
    * Handles ZIP form submission and redirects to brand page.
@@ -35,7 +44,7 @@ export default function ZipRouterPage() {
       return;
     }
     // Redirect to brand page
-    router.push(`/brand/${brandId}?zip=${zip}`);
+    router.push(`/${brandId}?zip=${zip}`);
   };
 
   // @todo: Add geolocation fallback for user convenience
